@@ -1,1 +1,1 @@
-web: gunicorn python-hangman.wsgi --log-file -
+web: gunicorn wsgi.py --log-file -

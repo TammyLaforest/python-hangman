@@ -1,0 +1,14 @@
+*.pyc
+*~
+__pycache__
+myvenv
+.DS_Store
+_init_py
+.idea
+
+__init__.py
+
+Bin
+Include
+Lib
+.Python

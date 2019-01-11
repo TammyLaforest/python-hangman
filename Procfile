@@ -1,1 +1,1 @@
-web: gunicorn python-hangman.py 
+web: gunicorn python-hangman.py:application -b xx.xxx.xxx.xx:5000

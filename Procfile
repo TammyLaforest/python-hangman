@@ -1,1 +1,1 @@
-web: gunicorn python-hangman.py:application 
+web: gunicorn python-hangman:application 

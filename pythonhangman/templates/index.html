@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Python Hangman</title>
+  <link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/styles/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans|Montserrat|Palanquin|Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fondamento:400i|Philosopher:400i" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
+
+</head>
+<body>
+   <div class="container d-flex w-100 h-100 p-3 flex-column">
+    <header >
+
+    <nav class="navbar navbar-expand-lg navbar-dark nav-masthead ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+      <ul class="nav navbar-nav mx-auto">
+        <li class="nav-item active">
+          <a class="nav-link active" href="index.html">Home<span class="sr-only">(current)</span></a>
+        </li>
+       
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href = "mailto: TammyLaforest@gmail.com">Email Me</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Social
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="http://www.github.com/tammylaforest" target="_blank">GitHub</a>
+            <a class="dropdown-item" href="http://www.Linkedin.com/in/tammylaforest" target="_blank">LinkedIn</a>
+            <a class="dropdown-item" href="https://twitter.com/tammylaforest">Twitter</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+
+
+{% if name %}
+  <h1>Hello {{ name }}!</h1>
+{% else %}
+  <h1>Hello, World!</h1>
+{% endif %}
+
+
+
+<div class="cover-container cover-content d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+  <main role="main" class="inner cover">
+    <h1 class="cover-heading">Python Hangman</h1>
+    <h3 class="subtitle red">Guess the Word</h3>
+    <p class="lead"></p>
+
+    <p class="lead">
+      <a href="#" class="btn btn-lg btn-secondary btn-projects">Play</a>
+    </p>
+  </main>
+  
+
+  <footer class="mastfoot mt-auto">
+
+  </footer>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>

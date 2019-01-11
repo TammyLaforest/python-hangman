@@ -25,3 +25,11 @@ class DevelopmentConfig(Config):
 
 class TestingConfig(Config):
     TESTING = True
+
+# flask wtf settings
+WTF_CSRF_ENABLED = True
+
+# project settings
+
+PROJECT_SITE_NAME = u'Python-Hangman'
+PROJECT_SITE_URL = u'http://127.0.0.1:5000'

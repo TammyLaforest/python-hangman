@@ -1,0 +1,49 @@
+/* idea from: https://stackoverflow.com/questions/43322063/how-to-break-an-image-into-9-small-ones-sort-of-puzzle-pieces
+*/
+html, body {
+  margin: 0;
+}
+.puzzle {
+  width: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.puzzle > div {
+  width: 33.333%;
+  height: 33.333%;
+  background: red;
+  border: 1px solid white;
+  box-sizing: border-box;
+  background: url(http://lorempixel.com/600/600/nature/1/) no-repeat;
+  background-size: 300%;
+}
+.puzzle > div[data-piece1] {
+  background-position: 0 0;
+}
+.puzzle > div[data-piece2] {
+  background-position: 50% 0;
+}
+.puzzle > div[data-piece3] {
+  background-position: 100% 0;
+}
+
+.puzzle > div[data-piece4] {
+  background-position: 0 50%;
+}
+.puzzle > div[data-piece5] {
+  background-position: 50% 50%;
+}
+.puzzle > div[data-piece6] {
+  background-position: 100% 50%;
+}
+
+.puzzle > div[data-piece7] {
+  background-position: 0 100%;
+}
+.puzzle > div[data-piece8] {
+  background-position: 50% 100%;
+}
+.puzzle > div[data-piece9] {
+  background-position: 100% 100%;
+}

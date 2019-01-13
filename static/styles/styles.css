@@ -1,13 +1,10 @@
-  a,
-  a:focus{
+  a {
     color: #fff;
     padding: 7px;
     padding-bottom: 3px;
     text-decoration: none;
     border-bottom: 1px solid white;
-
   }
-
   a:hover
   {
     color: darkorange;
@@ -15,16 +12,6 @@
     text-decoration: none;
     border-bottom: 2px solid darkorange;
   }
-
-  .btn-secondary,
-  .btn-secondary:hover,
-  .btn-secondary:focus {
-    color: #333;
-    background-color: #fff;
-    border: .05rem solid #fff;
-  }
-
-
 
 
   body {
@@ -123,19 +110,23 @@ font-family: 'Merriweather', serif;
       margin: 10px auto;
     }
 
-    .new-game-button {
-      margin: 10px;
-      background-color: darkorange;
-/*      font-weight: bold;*/
-      border-color: white;
+     #new-game-button, button{
+    display: inline-block;
+    border: 1px solid darkorange;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: darkorange;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     }
 
-    .new-game-button:hover {
-      margin: 10px;
-      background-color: white;
-      border-color: darkorange;
-      color: orange;
-    }
 
     .message {
       border: 1px solid red; 

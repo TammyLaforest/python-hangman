@@ -17,6 +17,7 @@
 {% endblock %}
 
 <body>
+ 
   <div class="d-flex w-100 h-100 p-3 mx-auto flex-column">
     <div class="container center">
       <div class="row center">
@@ -26,9 +27,7 @@
        <h4  class="message"> {{ message }} </h4>
      </div>
      <div class="row center">
-      <form action="/new_game" methods='POST'>
-        <button  href="#" name="new-game-button" class="btn btn-primary new-game-button">New Game</button>
-      </form>
+        <a type="button" href="/new_game" name="new-game-button" id="new-game-button" >New Game</a>
     </div>
  {% block content %}{% endblock %}
  {% block footer %}

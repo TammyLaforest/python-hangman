@@ -122,7 +122,7 @@ def guess_a_word():
 			joined_list = list_joined(status)
 			wrong_list = " ".join(wrong_guesses)
 			num_wrong_guesses = len(wrong_list)
-			return render_template("new_game.html", joined_list=joined_list, image=image, word=word, n=n, message=message, num_wrong_guesses= num_wrong_guesses, wrong_list=wrong_list)
+		return render_template("new_game.html", joined_list=joined_list, image=image, word=word, n=n, message=message, num_wrong_guesses= num_wrong_guesses, wrong_list=wrong_list)
 
 
 def check(word,guesses):

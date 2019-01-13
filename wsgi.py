@@ -78,10 +78,12 @@ def full_word(status):
             return False
     return True  
 
-
-def you_win():
+@app.route('/win', methods=['POST', 'get'])
+def you_win(joined_list):
 	global message
 	message=('{} is it! It took {} tries.'.format(word, len(guesses)))
+
+
 
 
 @app.route('/guess', methods=['POST', 'get'])
@@ -103,8 +105,13 @@ def guess_a_word():
 
 				elif len(guess) == n:
 					if guess == word:
+						status=word
+						joined_list = list_joined(status)
+						wrong_list = " ".join(wrong_guesses)
+						num_wrong_guesses = len(wrong_list)
 						guessed = True
-						you_win()
+						you_win(joined_list)
+						return render_template("win.html", joined_list=joined_list, image=image, word=word, n=n, message=message, num_wrong_guesses= num_wrong_guesses, wrong_list=wrong_list)
 
 					else: 
 						wrong_guesses.append(guess)
@@ -113,8 +120,13 @@ def guess_a_word():
 				else: 
 					check(word, guesses)
 					if full_word(status):
+						status=word
+						joined_list = list_joined(status)
+						wrong_list = " ".join(wrong_guesses)
+						num_wrong_guesses = len(wrong_list)
 						guessed = True
-						you_win()
+						you_win(joined_list)
+						return render_template("win.html", joined_list=joined_list, image=image, word=word, n=n, message=message, num_wrong_guesses= num_wrong_guesses, wrong_list=wrong_list)
 			joined_list = list_joined(status)
 			wrong_list = " ".join(wrong_guesses)
 			num_wrong_guesses = len(wrong_list)

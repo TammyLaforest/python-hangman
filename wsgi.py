@@ -76,10 +76,7 @@ def full_word(status):
             return False
     return True  
 
-@app.route('/win', methods=['POST', 'get'])
-def you_win(joined_list):
-	global message
-	message=('{} is it! It took {} tries.'.format(word, len(guesses)))
+
 
 
 @app.route('/guess', methods=['POST', 'get'])
@@ -150,7 +147,10 @@ def check(word,guesses):
 	return status
 
 
-
+@app.route('/win')
+def you_win(joined_list):
+	global message
+	message=('{} is it! It took {} tries.'.format(word, len(guesses)))
 
 if __name__ == '__main__':
 	app.run()

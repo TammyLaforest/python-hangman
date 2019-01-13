@@ -20,119 +20,118 @@
     display: -ms-flexbox;
     display: flex;
     color: #fff;
-/*font-family: 'Kameron', serif;*/
-/*font-family: 'IM Fell English SC', serif;*/
-font-family: 'Merriweather', serif;
-  }
-
-  footer {
-    margin-top: 1em;
+    /*font-family: 'Kameron', serif;*/
+    /*font-family: 'IM Fell English SC', serif;*/
+    font-family: 'Merriweather', serif;
   }
 
 
-    .contact-item
-    {
-      padding-right: 1em;
-      padding-left: 1em;
-      font-size: 1.2em;
-    }
-    .footer-contact
-    {
-/*      font-family: 'Montserrat', sans-serif;*/
-      font-size: 1em;
-      text-align: center;
-    }
 
-    .mastfoot {
-      color: rgba(255, 255, 255, .5);
-    }
 
-    .row {
-      padding-top: .5em;
-    }
-    .center {
-      display: block;
-      text-align: center;
-      margin: 0 auto;
-    }
-
-    .hide {
-      display: none;
-    }
-
-    .show {
-      display:block;
-    }
-
-    .red
-    {
-      color: red;
-    }
-
-    .joined_list{
-      font-size: 3em;
-      letter-spacing: 5px;
-    }
-
-    .guessbox{
-      border: 1px solid gray; 
-      padding: .5em; 
-      width: fit-content;
-      margin: .5em auto;
-/*      margin-top: .5em;
-      margin-bottom: .5em;*/
-      color: #333;
-      display:block;
-    }
-
-    .wrongguesses{
-      min-height: 3.5em;
-      background-color: lightgray;
-      border-radius: 50px 50px 50px 50px;
-      display: block;
-    }
-
-   .wronglisttitle{
-      padding-top: .5em;
-
-    }
-    .wronglist{
-      padding: .5em;
-
-    }
-
-    .catimg
-    {
-      max-width: 630px;
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 10px auto;
-    }
-
-     #new-game-button, button{
-    display: inline-block;
-    border: 1px solid darkorange;
-    border-radius: 5px;
-    padding: 1rem 2rem;
-    margin: 0;
-    text-decoration: none;
-    background: darkorange;
-    color: #ffffff;
-    cursor: pointer;
+  .contact-item
+  {
+    padding-right: 1em;
+    padding-left: 1em;
+    font-size: 1.2em;
+  }
+  .footer-contact
+  {
+    /*      font-family: 'Montserrat', sans-serif;*/
+    font-size: 1em;
     text-align: center;
-    transition: background 250ms ease-in-out, 
-                transform 150ms ease;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    }
+  }
+
+  .mastfoot {
+    color: rgba(255, 255, 255, .5);
+    margin-top: 3em;
+  }
+
+  .row {
+    padding-top: .5em;
+  }
+  .center {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .show {
+    display:block;
+  }
+
+  .red
+  {
+    color: red;
+  }
+
+  .joined_list{
+    font-size: 3em;
+    letter-spacing: 5px;
+  }
+
+  .guessbox{
+    border: 1px solid gray; 
+    padding: .5em; 
+    width: fit-content;
+    margin: .5em auto;
+/*      margin-top: .5em;
+margin-bottom: .5em;*/
+color: #333;
+display:block;
+}
+
+.wrongguesses{
+  min-height: 3.5em;
+  background-color: lightgray;
+  border-radius: 50px 50px 50px 50px;
+  display: block;
+}
+
+.wronglisttitle{
+  padding-top: .5em;
+
+}
+.wronglist{
+  padding: .5em;
+
+}
+
+.catimg
+{
+  max-width: 630px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+#new-game-button, button{
+  display: inline-block;
+  border: 1px solid darkorange;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: darkorange;
+  color: #ffffff;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, 
+  transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 
 
-    .message {
-      border: 1px solid red; 
-      border-radius: 50px 20px; 
-      padding: 1em;
-      margin: .5em auto;
-    }
+.message {
+  border: 1px solid red; 
+  border-radius: 50px 20px; 
+  padding: 1em;
+  margin: .5em auto;
+}
 
 

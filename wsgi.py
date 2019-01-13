@@ -49,10 +49,8 @@ def get_random_word():
 @app.route('/new_game')
 def new_game():
 	global status, guesses, wrong_guesses, num_wrong_guesses, guessed, image, message, word, n 
-
-	if request.method == "POST":
-		new_game = request.form['new-game-button']
-	
+	# if request.method == "POST":
+	# 	new_game = request.form['new-game-button']
 	# Reset globals for new game
 	guessed = False
 	status =[]

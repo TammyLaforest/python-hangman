@@ -75,8 +75,6 @@ def full_word(status):
     return True  
 
 
-
-
 @app.route('/guess', methods=['POST'])
 def guess_a_word():
 	global guessed, guesses, message, joined_list, n, word, wrong_guesses, status
@@ -85,45 +83,65 @@ def guess_a_word():
 		if request.method == "POST":
 			text = request.form['user_input']
 			guess = text.upper()
-			
-			if guess in guesses:
-				message = "You already guessed " + guess
-			else: 
+			lenguess = len(guess)
+			print(lenguess)
+
+			if len(guess) != n and len(guess) != 1:
+				message=("Your guess is the wrong length!")
 				guesses.append(guess)
 				joined_list = list_joined(status)
+				wrong_list = " ".join(wrong_guesses)
+				num_wrong_guesses = len(wrong_list)
+				return render_template("new_game.html", joined_list=joined_list, image=image, word=word, n=n, message=message, num_wrong_guesses= num_wrong_guesses, wrong_list=wrong_list)
 
-				if len(guess) != n and len(guess) != 1:
-					message=("Your guess is the wrong length!")
+			else: 
+				if guess in guesses:
+					message = "You already guessed " + guess
+					joined_list = list_joined(status)
+					wrong_list = " ".join(wrong_guesses)
+					num_wrong_guesses = len(wrong_list)
+					return render_template("new_game.html", joined_list=joined_list, image=image, word=word, n=n, message=message, num_wrong_guesses= num_wrong_guesses, wrong_list=wrong_list)
 
-				elif len(guess) == n:
-					if guess == word:
-						status=word
-						joined_list = list_joined(status)
-						wrong_list = " ".join(wrong_guesses)
-						num_wrong_guesses = len(wrong_list)
-						guessed = True
-						you_win(joined_list)
-						return render_template("win.html", joined_list=joined_list, image=image, word=word, n=n, message=message, num_wrong_guesses= num_wrong_guesses, wrong_list=wrong_list)
+				else:
+					guesses.append(guess)
+					if len(guess) == n:
+						if guess == word:
+							guessed = True
+							status=word
+							joined_list = list_joined(status)
+							wrong_list = " ".join(wrong_guesses)
+							num_wrong_guesses = len(wrong_list)
+							you_win(joined_list)
+							return render_template("win.html", joined_list=joined_list, image=image, word=word, n=n, message=message, num_wrong_guesses= num_wrong_guesses, wrong_list=wrong_list)
 
+						else: 
+							wrong_guesses.append(guess)
+							message=("Wrong! Try again!")
+							joined_list = list_joined(status)
+							wrong_list = " ".join(wrong_guesses)
+							num_wrong_guesses = len(wrong_list)
+							return render_template("new_game.html", joined_list=joined_list, image=image, word=word, n=n, message=message, num_wrong_guesses= num_wrong_guesses, wrong_list=wrong_list)	
 					else: 
-						wrong_guesses.append(guess)
-						message=("Wrong! Try again!")
-						continue
-				else: 
-					check(word, guesses)
-					if full_word(status):
-						status=word
-						joined_list = list_joined(status)
-						wrong_list = " ".join(wrong_guesses)
-						num_wrong_guesses = len(wrong_list)
-						guessed = True
-						you_win(joined_list)
-						return render_template("win.html", joined_list=joined_list, image=image, word=word, n=n, message=message, num_wrong_guesses= num_wrong_guesses, wrong_list=wrong_list)
-			joined_list = list_joined(status)
-			wrong_list = " ".join(wrong_guesses)
-			num_wrong_guesses = len(wrong_list)
-		return render_template("new_game.html", joined_list=joined_list, image=image, word=word, n=n, message=message, num_wrong_guesses= num_wrong_guesses, wrong_list=wrong_list)
+						check(word, guesses)
+						if full_word(status):
+							guessed = True
+							status=word
+							joined_list = list_joined(status)
+							wrong_list = " ".join(wrong_guesses)
+							num_wrong_guesses = len(wrong_list)
+							you_win(joined_list)
+							return render_template("win.html", joined_list=joined_list, image=image, word=word, n=n, message=message, num_wrong_guesses= num_wrong_guesses, wrong_list=wrong_list)
+							
 
+		joined_list = list_joined(status)
+		wrong_list = " ".join(wrong_guesses)
+		num_wrong_guesses = len(wrong_list)
+		return render_template("new_game.html", joined_list=joined_list, image=image, word=word, n=n, message=message, num_wrong_guesses= num_wrong_guesses, wrong_list=wrong_list)
+	joined_list = list_joined(status)
+	wrong_list = " ".join(wrong_guesses)
+	num_wrong_guesses = len(wrong_list)
+	you_win(joined_list)
+	return render_template("win.html", joined_list=joined_list, image=image, word=word, n=n, message=message, num_wrong_guesses= num_wrong_guesses, wrong_list=wrong_list)
 
 def check(word,guesses):
 	global status, message

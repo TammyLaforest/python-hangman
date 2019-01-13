@@ -1,33 +1,42 @@
   a,
   a:focus{
     color: #fff;
+    padding: 10px;
+    padding-bottom: 3px;
+    text-decoration: none;
+    border-bottom: 2px solid white;
+
   }
 
   a:hover
   {
     color: darkorange;
-    text-decoration: none
+    border-bottom: 1px solid darkorange;
+    text-decoration: none;
+    border-bottom: 3px solid darkorange;
+
   }
 
   .btn-secondary,
   .btn-secondary:hover,
   .btn-secondary:focus {
     color: #333;
-    text-shadow: none;  Prevent inheritance from `body` 
     background-color: #fff;
     border: .05rem solid #fff;
   }
 
-  html,
+
+
+
   body {
     height: 100%;
     background-color: #333;
-  }
-
-  body {
     display: -ms-flexbox;
     display: flex;
     color: #fff;
+/*font-family: 'Kameron', serif;*/
+/*font-family: 'IM Fell English SC', serif;*/
+font-family: 'Merriweather', serif;
   }
 
 
@@ -39,7 +48,7 @@
     }
     .footer-contact
     {
-      font-family: 'Montserrat', sans-serif;
+/*      font-family: 'Montserrat', sans-serif;*/
       font-size: 1em;
       text-align: center;
     }
@@ -70,18 +79,27 @@
       color: red;
     }
 
+    .joined_list{
+      font-size: 3em;
+      letter-spacing: 5px;
+    }
+
     .guessbox{
       border: 1px solid gray; 
       padding: .5em; 
       width: fit-content;
-      margin: .5em;
+      margin: .5em auto;
+/*      margin-top: .5em;
+      margin-bottom: .5em;*/
       color: #333;
+      display:block;
     }
 
     .wrongguesses{
       min-height: 3.5em;
       background-color: lightgray;
       border-radius: 50px 50px 50px 50px;
+      display: block;
     }
 
    .wronglisttitle{
@@ -91,6 +109,15 @@
     .wronglist{
       padding: .5em;
 
+    }
+
+    .catimg
+    {
+      max-width: 630px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 10px auto;
     }
 
     .new-game-button {
@@ -111,12 +138,7 @@
       border: 1px solid red; 
       border-radius: 50px 20px; 
       padding: 1em;
-      margin: .5em;
+      margin: .5em auto;
     }
 
-    .catimg
-    {
-      max-width: 630px;
-      width: 100%;
-      height: auto;
-    }
+

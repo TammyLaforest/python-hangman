@@ -84,8 +84,6 @@ def you_win(joined_list):
 	message=('{} is it! It took {} tries.'.format(word, len(guesses)))
 
 
-
-
 @app.route('/guess', methods=['POST', 'get'])
 def guess_a_word():
 	global guessed, guesses, message, joined_list, n, word, wrong_guesses, status

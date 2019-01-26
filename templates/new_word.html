@@ -1,6 +1,22 @@
 {% extends "layout.html" %}
 {% block content %}
 
+
+
+
+
+
+<div class="d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <div class="container center">
+    <div class="row center">
+      <h1>Guess the Word</h1>
+    </div>
+    <div class="row center">
+     <h4  class="message"> {{ message }} </h4>
+   </div>
+   <div class="row center">
+      <a type="button" onsubmit="return false;" href="/new_game" name="new-game-button" id="new-game-button">New Game</a>
+  </div>
     <div class="row center joined_list">
       <h1 >{{ joined_list }}</h1>
     </div>
@@ -9,7 +25,7 @@
         Guess a letter or {{ n }} letter word.<br>
         <input autocomplete="off" onkeypress="return noenter()" autofocus="autofocus" type="text" name="user_input" placeholder="Guess">
         <input type="submit" value="Submit">
-      </form> 
+      </form>
     </div>
     <div class="row center guessbox" >
       <div class="col-sm wrongguesses">
@@ -21,7 +37,5 @@
         <img src="{{ image }}" class="catimg">
       </div>
     </div>
-  
+
 {% endblock %}
-
-

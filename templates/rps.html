@@ -3,40 +3,55 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<div class="d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <div class="container center">
+<!-- <div class="d-flex w-100 h-100 p-3 mx-auto flex-column">
+ --><div class="container center">
 	<div class="row center">
 	  <h1>Rock, Paper, Scissors</h1>
 	</div>
 	<div class="row center">
 	 <h4  class="message"> {{ message }}</h4>
    </div>
-   <div class="row center choicediv">
-<a class="choices" href="{{ url_for('playrps', choice="rock") }}"><i class="far fa-hand-rock fa-5x" aria-hidden="true"></i></a>
+   
+   <div class="row center ">
+	   	<div class="col-sm rpsscore">
+		 <h5>Your Score</h5>
+		 <h5 style="color:{{ winning }}">{{ humanscore }}</h5>
+		 
+		 <h5>Your Choice</h5>
+		 {% if humanchoice == "rock" %}
+		 	<i class="far fa-hand-rock fa-2x" aria-hidden="true"></i>
+		 {% elif humanchoice == "paper" %}
+			<i class="far fa-hand-paper fa-2x" aria-hidden="true"></i>
+		 {% elif humanchoice == "scissors" %}
+			<i class="far fa-hand-scissors fa-2x"></i>
+		{% endif %}
+		<h5>{{ humanchoice }}</h5>
 
-<a class="choices" href="{{ url_for('playrps', choice="paper") }}"><i class="far fa-hand-paper fa-5x" aria-hidden="true"></i></a>
 
-<a class="choices" href="{{ url_for('playrps', choice="scissors") }}"><i class="far fa-hand-scissors fa-5x"></i></a>
-</div>
+		
+		</div>
+		<div class="col-sm choicediv">
+		 
+			<a class="choices" href="{{ url_for('playrps', choice="rock") }}"><i class="far fa-hand-rock fa-5x" aria-hidden="true"></i></a>
 
-<div class="row center">
-<div class="col-sm">
-	 <h5>Your Score</h5>
-	 <h5 style="color:{{ winning }}">{{ humanscore }}</h5>
-	 
-	 <h5>Your Choice</h5>
-	<h5>{{ humanchoice }}</h5>
+			<a class="choices" href="{{ url_for('playrps', choice="paper") }}"><i class="far fa-hand-paper fa-5x" aria-hidden="true"></i></a>
+
+			<a class="choices" href="{{ url_for('playrps', choice="scissors") }}"><i class="far fa-hand-scissors fa-5x"></i></a>
+		</div>
+		<div class="col-sm rpsscore"> 
+			 <h5>Computer's Score</h5>
+			 <h5>
+			 {{ aiscore }}</h5>
+			<h5>Computer's Choice</h5>
+			{% if aichoice == "rock" %}
+		 	<i class="far fa-hand-rock fa-2x" aria-hidden="true"></i>
+		 {% elif aichoice == "paper" %}
+			<i class="far fa-hand-paper fa-2x" aria-hidden="true"></i>
+		 {% elif aichoice == "scissors" %}
+			<i class="far fa-hand-scissors fa-2x"></i>
+		{% endif %}
+		<h5>{{ aichoice }}</h5>
+		</div>
 	</div>
-	 <div class="col-sm"> 
-	 <h5>Computer's Score</h5>
-	 <h5>
-	 {{ aiscore }}</h5>
-	<h5>Computer's Choice</h5>
-	<h5>{{ aichoice }}</h5>
-</div>
-	</div>
-
-
-
 </div>
 {% endblock %}

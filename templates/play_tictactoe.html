@@ -1,8 +1,8 @@
 {% extends "layout.html" %}
 {% block title %}Two Player{% endblock %}
-    {% block content %}
+{% block content %}
 <div class="container">
-      <div class="row header">
+    <div class="row header">
         <h1>Tic Tac Toe</h1>
     </div>
     <div class="row">
@@ -10,13 +10,10 @@
         <a  href="{{ url_for('ai_game') }}" class="btn btn-primary button">New game against computer</a>
     </div>
     <div class="row">
-     <h6 class="message">{{ message }}</h6>
+        <h6 class="message">{{ message }}</h6>
+    </div>
+    <div class="row">
 
- </div>
- <div class="row">
-
-    
-<div class="col-lg">
     <table>
         {% for i in range(3) %}
         <tr>
@@ -40,5 +37,6 @@
         </tr>
         {% endfor %}
     </table>
-</div>
+            </div>
+    </div>
 {% endblock %}

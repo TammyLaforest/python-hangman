@@ -8,7 +8,6 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/tyles.css') }}">
 
 <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/gamestyles.css') }}">
 	{% endblock %}
@@ -16,9 +15,9 @@
 
 <body>
 
-
+<div class="container">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Games</a>
+  <a class="navbar-brand" href="#">Python-Games</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -27,18 +26,18 @@
       <li class="nav-item active">
         <a class="nav-link" href="{{ url_for('index') }}">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="#">Four in a row</a>
-      </li>
+      </li> -->
       <li class="nav-item">
         <a class="nav-link" href="{{ url_for('tictactoe_home') }}">Tic Tac Toe</a>
       </li>
 
-	<li class="nav-item">
+	<!-- <li class="nav-item">
         <a class="nav-link" href="#">Draw</a>
-      </li>      
+      </li>       -->
       <li class="nav-item">
-        <a class="nav-link" href="#">Guess the Word</a>
+        <a class="nav-link" href="{{ url_for('new_word') }}">Guess the Word</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Rocks, Paper, Scissors</a>
@@ -50,11 +49,8 @@
 
     
 {% block content %}{% endblock %}
-
-{% block footer %}
-
- {% endblock %}
- <footer class="mastfoot mt-auto center">
+<div class="row">
+ <footer class="mx-auto center">
    Created by Tammy Laforest.
    <ul class="list-inline">
      <li class="list-inline-item"><a href="http://www.tjlaforest.com" target="_blank">Portfolio</a></li>
@@ -63,11 +59,12 @@
      <li class="list-inline-item"><a href="https://twitter.com/tammylaforest">Twitter</a></li>
      <li class="list-inline-item"><a href = "mailto: TammyLaforest@gmail.com">Email</a></li>
    </ul>
- </div>
+ 
 </footer>
+</div>
+</div>
  <script type="text/javascript">
- function noenter() {
-   return !(window.event && window.event.keyCode == 13); }
+ 
 
     document.cookie = "foo=bar;";
      if (!document.cookie)

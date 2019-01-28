@@ -18,6 +18,9 @@ Session(app)
 def index():
 	return render_template("index.html")
 
+@app.route('/rps')
+def rps():
+	return render_template("rps.html")
 
 # Hangman
 

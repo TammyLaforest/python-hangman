@@ -1,11 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
 
-
-
-
-
-
 <div class="d-flex w-100 h-100 p-3 mx-auto flex-column">
   <div class="container center">
     <div class="row center">
@@ -15,13 +10,13 @@
      <h4  class="message"> {{ message }} </h4>
    </div>
    <div class="row center">
-      <a type="button" onsubmit="return false;" href="/new_game" name="new-game-button" id="new-game-button">New Game</a>
+      <a class ="center" type="button" onsubmit="return false;" href="/new_word" name="new-game-button" id="new-game-button">New Word</a>
   </div>
     <div class="row center joined_list">
       <h1 >{{ joined_list }}</h1>
     </div>
     <div class="row center">
-      <form action="/guess" method='POST'>
+      <form action="/guess" method='POST' class="inputbox">
         Guess a letter or {{ n }} letter word.<br>
         <input autocomplete="off" onkeypress="return noenter()" autofocus="autofocus" type="text" name="user_input" placeholder="Guess">
         <input type="submit" value="Submit">

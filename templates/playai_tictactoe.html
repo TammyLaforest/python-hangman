@@ -1,8 +1,7 @@
 {% extends "layout.html" %}
 {% block title %}Play AI{% endblock %}
-    {% block content %}
-
-    <div class="container">
+{% block content %}
+<div class="container">
       <div class="row header">
         <h1>Tic Tac Toe</h1>
     </div>
@@ -12,9 +11,8 @@
     </div>
     <div class="row">
      <h6 class="message">{{ message }}</h6>
-
- </div>
- <div class="row">
+    </div>
+    <div class="row">
 
     <table>
         {% for i in range(3) %}
@@ -39,4 +37,6 @@
         </tr>
         {% endfor %}
     </table>
+            </div>
+    </div>
 {% endblock %}

@@ -6,26 +6,37 @@
 <div class="d-flex w-100 h-100 p-3 mx-auto flex-column">
   <div class="container center">
 	<div class="row center">
-	  <h1>Games</h1>
+	  <h1>Rock, Paper, Scissors</h1>
 	</div>
 	<div class="row center">
-	 <h4  class="message"> {{ message }} </h4>
+	 <h4  class="message"> {{ message }}</h4>
    </div>
-   <div class="row center">
-	<ul>
-	 <li> <a class="nav-link" href="{{ url_for('guesstheword') }}">Guess the Word</a></li>
-	 <li><a class="nav-link" href="{{ url_for('tictactoe_home') }}">Tic Tac Toe</a></li>
-	 <li> <a class="nav-link" href="{{ url_for('rps') }}">Rock, Paper, Scissors</a></li>
-	</ul>
-  </div>
-<div class="row">
-	<br>
-	<br>
+   <div class="row center choicediv">
+<a class="choices" href="{{ url_for('playrps', choice="rock") }}"><i class="far fa-hand-rock fa-5x" aria-hidden="true"></i></a>
 
+<a class="choices" href="{{ url_for('playrps', choice="paper") }}"><i class="far fa-hand-paper fa-5x" aria-hidden="true"></i></a>
+
+<a class="choices" href="{{ url_for('playrps', choice="scissors") }}"><i class="far fa-hand-scissors fa-5x"></i></a>
 </div>
-<div class="row">
-	<br>
-	<br>
+
+<div class="row center">
+<div class="col-sm">
+	 <h5>Your Score</h5>
+	 <h5 style="color:{{ winning }}">{{ humanscore }}</h5>
+	 
+	 <h5>Your Choice</h5>
+	<h5>{{ humanchoice }}</h5>
+	</div>
+	 <div class="col-sm"> 
+	 <h5>Computer's Score</h5>
+	 <h5>
+	 {{ aiscore }}</h5>
+	<h5>Computer's Choice</h5>
+	<h5>{{ aichoice }}</h5>
+</div>
+	</div>
+
+
 
 </div>
 {% endblock %}

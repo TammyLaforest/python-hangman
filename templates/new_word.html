@@ -6,11 +6,9 @@
     <div class="row center">
       <h1>Guess the Word</h1>
     </div>
-    <div class="row center">
-     <h4  class="message"> {{ message }} </h4>
-   </div>
+
    <div class="row center">
-      <a class ="center" type="button" onsubmit="return false;" href="/new_word" name="new-game-button" id="new-game-button">New Word</a>
+      <a class ="center" class="btn button" type="button" onsubmit="return false;" href="/new_word" name="new-game-button" id="new-game-button">New Word</a>
   </div>
     <div class="row center joined_list">
       <h1 >{{ joined_list }}</h1>
@@ -22,6 +20,9 @@
         <input type="submit" value="Submit">
       </form>
     </div>
+        <div class="row center">
+     <h4  class="message"> {{ message }} </h4>
+   </div>
     <div class="row center guessbox" >
       <div class="col-sm wrongguesses">
         <h5 class="wronglisttitle">Wrong Guesses</h5>

@@ -13,9 +13,24 @@
    </div>
    <div class="row center">
 	
-	 <h3 class="center"><a class="nav-link" href="{{ url_for('guesstheword') }}">Guess the Word</a></h3><br>
-	 <h3 class="center"><a class="nav-link" href="{{ url_for('tictactoe_home') }}">Tic Tac Toe</a></h3><br>
-	 <h3 class="center"><a class="nav-link" href="{{ url_for('rps') }}">Rock, Paper, Scissors</a></h3><br>
+   	<div class="col-sm">
+   		<h3 class="center pagestitle"><a class="pagestitle" href="{{ url_for('tictactoe_home') }}">Tic Tac Toe</h3>
+   		<img src="static/media/tictactoesquare.png" class="pagesimg" alt="picture of tic tac toe board"></a>
+
+   	</div>
+	
+	<div class="col-sm">
+		<h3 class="center pagestitle"><a class="pagestitle" href="{{ url_for('guesstheword') }}">Guess the Word</h3>
+		<img src="static/media/guesswordsquare.png" class="pagesimg" alt="picture of hangman"></a>
+			 
+   	</div>
+   	
+   	<div class="col-sm">
+   		<h3 class="center pagestitle"><a class="pagestitle" href="{{ url_for('rps') }}">Rock, Paper, Scissors</h3>
+   		<img src="static/media/rpssquare.png" class="pagesimg" alt="picture of Rock, Paper, Scissors icons"></a>
+   			 
+
+   	</div>
 
   </div>
 <div class="row">

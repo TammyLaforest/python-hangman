@@ -1,6 +1,4 @@
 
-
-
             body, header, h1, .btn, .message{
                 display: block;
                 text-align: center;
@@ -104,12 +102,10 @@
   }
 
   .guessbox{
-    border: 1px solid gray; 
+/*    border: 1px solid darkorange; */
     padding: .5em; 
     width: fit-content;
     margin: .5em auto;
-/*      margin-top: .5em;
-margin-bottom: .5em;*/
 color: #333;
 display:block;
 }
@@ -117,7 +113,7 @@ display:block;
 .wrongguesses{
   min-height: 3.5em;
   background-color: lightgray;
-  border-radius: 50px 50px 50px 50px;
+/*  border-radius: 50px 50px 50px 50px;*/
   display: block;
   padding: .4em;
 }
@@ -144,7 +140,7 @@ display:block;
   display: inline-block;
   border: 1px solid darkorange;
   border-radius: 5px;
-  padding: 1rem 2rem;
+  padding: 5px 10px;
   margin: 0 auto;
   text-decoration: none;
   background: darkorange;
@@ -205,3 +201,19 @@ display:block;
 
 }
             
+
+footer {
+display:block;
+}
+
+.pagesimg {
+
+  max-width: 100%;
+  margin-bottom: 2em;
+}
+
+.pagestitle {
+
+  color: darkred;
+  text-align: center;
+}
